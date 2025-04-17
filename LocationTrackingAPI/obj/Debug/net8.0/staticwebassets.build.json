@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "DBNAPt05Misw5UkTHIsQIPHfIkPgdxSjKwx6GQCczhM=",
+  "Source": "LocationTrackingAPI",
+  "BasePath": "_content/LocationTrackingAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

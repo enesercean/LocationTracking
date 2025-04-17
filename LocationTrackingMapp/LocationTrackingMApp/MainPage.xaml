@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocationTrackingMApp.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="150"
+                Aspect="AspectFit"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Location Tracking"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="LocationText"
+                Text="Location tracking is disabled"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label 
+                    Text="Enable Tracking" 
+                    VerticalOptions="Center"
+                    Margin="0,0,10,0" />
+                <Switch 
+                    x:Name="TrackingSwitch"
+                    IsToggled="False"
+                    Toggled="OnTrackingSwitchToggled" />
+            </StackLayout>
+
+            <BoxView 
+                HeightRequest="1"
+                Background="#dddddd"
+                HorizontalOptions="Fill" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label 
+                    x:Name="LocationInfoLabel"
+                    Text="Location Information"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center" />
+                
+                <Label 
+                    x:Name="LatitudeLabel"
+                    Text="Latitude: -"
+                    HorizontalOptions="Center" />
+                
+                <Label 
+                    x:Name="LongitudeLabel"
+                    Text="Longitude: -"
+                    HorizontalOptions="Center" />
+                
+                <Label 
+                    x:Name="AltitudeLabel"
+                    Text="Altitude: -"
+                    HorizontalOptions="Center" />
+                
+                <Label 
+                    x:Name="AccuracyLabel"
+                    Text="Accuracy: -"
+                    HorizontalOptions="Center" />
+                
+                <Label 
+                    x:Name="StatusLabel"
+                    Text="Status: Disconnected"
+                    HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <Button
+                x:Name="ConnectButton"
+                Text="Connect to Server" 
+                Clicked="OnConnectButtonClicked"
+                HorizontalOptions="Fill" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
